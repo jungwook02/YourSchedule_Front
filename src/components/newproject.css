@@ -1,0 +1,49 @@
+@media (max-width: 768px) {
+    .new-Container {
+      width: 768;
+      align-items: center;
+    }
+
+    .h1-text{
+
+        font-size: 24px;
+        font-style: bold;
+        font-weight: 700;
+        color:#2E4374;
+        margin-left:20px;
+        margin : 10px;
+    }
+
+    .h2-text{
+        font-size: 18px;
+        font-weight: 600;
+        color:#2E4374;
+        font-style: Bold;
+        margin-left:20px;
+
+    }
+
+    input[type="text"] {
+        position: relative;
+        top:5px;
+        margin-left:40px;
+        
+    }
+    
+    input[type="submit"] {
+        width: 150px;
+        position: relative;
+        background-color: #007bff; /* 배경색을 파란색으로 지정 */
+        color: #fff; /* 텍스트 색상을 흰색으로 지정 */
+        border: none; /* 테두리 제거 */
+        padding: 10px 20px; /* 안쪽 여백 설정 */
+        border-radius: 5px; /* 둥근 테두리 설정 */
+        cursor: pointer; /* 마우스 커서를 포인터로 변경 */
+        margin-left: 30%;
+        top:300px;
+    }
+    select{
+        margin-left: 40px;
+    }
+}
+
