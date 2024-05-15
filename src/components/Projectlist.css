@@ -1,0 +1,45 @@
+@media (max-width: 768px) {
+
+    .first-project{
+    
+    margin-left: 20px;
+    width: 300px;
+    height: 70px;
+    
+    position: relative;
+    border-radius: 5%;
+     /* 배경색 */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.P-Title{
+    font-size: 16px;
+    color: #2E4374;
+    font-style: bold;
+    font-weight: 600;
+    margin-left: 10px;
+    margin-top: 20px;
+}
+.P-sub{
+    font-size: 12px;
+    color: #2E4374;
+    font-style: bold;
+    font-weight: 600;
+    margin-left: 10px;
+
+}
+.plus{
+    margin-top:300px;
+    margin-left: 160px;
+    width: 50px;
+    height: 50px;
+    color: white;
+    font-size: 30px;
+    position: relative;
+    text-align: center;
+    border-radius:50% ;
+    
+    background-color: #2E4374;
+}
+
+
+}
