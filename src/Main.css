@@ -1,0 +1,80 @@
+@media (max-width: 768px) {
+  .M-Background {
+    background-image: url('C:\Users\어진\yourschedule\public\img\background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+  }
+  
+  @font-face {
+    font-family: '고운바탕';
+    src: url('C:\Users\어진\yourschedule\public\font\GowunBatang-Regular.ttf') format('truetype');
+  }
+  
+  @keyframes slideInDown {
+    0% {
+      opacity: 0;
+      transform: translateY(-100%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes appear {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  .M-Title-Your {
+    position: absolute;
+    color: white;
+    font-family: '고운바탕', sans-serif;
+    font-size: 12vw;
+    transform: translate(-50%, -50%);
+    top: 30%;
+    left: 30%;
+    animation: slideInDown 3s ease forwards;
+  }
+  
+  .M-Title-Schedule {
+    position: absolute;
+    color: white;
+    font-family: '고운바탕', sans-serif;
+    font-size: 12vw;
+    transform: translate(-50%, -50%);
+    top: 40%;
+    left: 35%;
+    animation: slideInDown 3s ease forwards;
+  }
+  
+  
+  .M-Button {
+    display: inline-block;
+  
+    background-color: #2E4374;
+    padding: 3vw 15vw;
+  
+    color: white;
+    font-size: 2.5vw;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 80%;
+    left: 50%;
+
+    animation: appear 3s ease forwards;
+  }
+}
