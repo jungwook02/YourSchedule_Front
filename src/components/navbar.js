@@ -38,7 +38,7 @@ function Navbar() {
         <p className="nav-text">완성된</p>
         <p className="nav-text">프로젝트</p>
 
-        <p className="nav-text" onClick={openModal}> - </p>
+        <p className="nav-text" onClick={openModal}> sdgssdfsd </p>
       <Modal
         isOpen={modalIsOpen}
         onAfterOpen={afterOpenModal}

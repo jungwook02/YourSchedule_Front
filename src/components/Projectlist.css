@@ -1,45 +1,105 @@
 @media (max-width: 768px) {
+    .MenuBar {
+        display: inline-block;; /* 요소를 가로로 배열 */
 
-    .first-project{
+        font-size: 16px;
+        font-style: bold;
+        font-weight: 600;
+        color: #2E4374;
+
+        margin-left: 10px; /* 왼쪽 마진 지정 */
+        margin-right: 10px; /* 오른쪽 마진 지정 */
+        margin-top: 10px; /* 위쪽 마진 지정 */
+        margin-bottom: 10px; /* 아래쪽 마진 지정 */
+    }
+
+    .MenuBar.active {
+        color: #2E4374;
+    }
     
-    margin-left: 20px;
-    width: 300px;
-    height: 70px;
+    .MenuBar.inactive {
+        color: #CACACA;
+    }
     
-    position: relative;
-    border-radius: 5%;
-     /* 배경색 */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-.P-Title{
-    font-size: 16px;
-    color: #2E4374;
-    font-style: bold;
-    font-weight: 600;
-    margin-left: 10px;
-    margin-top: 20px;
-}
-.P-sub{
-    font-size: 12px;
-    color: #2E4374;
-    font-style: bold;
-    font-weight: 600;
-    margin-left: 10px;
-
-}
-.plus{
-    margin-top:300px;
-    margin-left: 160px;
-    width: 50px;
-    height: 50px;
-    color: white;
-    font-size: 30px;
-    position: relative;
-    text-align: center;
-    border-radius:50% ;
     
-    background-color: #2E4374;
-}
 
+    .P-Box{
+        margin-left: 2%;
+        margin-right: 2%;
+        margin-bottom: 2%;
 
+        display: flex;
+        flex-direction: column;
+
+        border-radius: 20px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /*그림자*/
+
+        cursor: pointer;
+    }
+
+    .P-Title{
+        font-size: 16px;
+        color: #2E4374;
+        font-style: bold;
+        font-weight: 600;
+
+        margin-left: 10px;
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+
+    .P-Sub{
+        font-size: 10px;
+        color: #2E4374;
+        font-style: bold;
+        font-weight: 600;
+
+        margin-left: 10px;
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+
+    .Plus-Button {
+        position: fixed;
+        top: 80%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        cursor: pointer;
+        text-align: center;
+
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+
+        color: white;
+        font-size: 30px;
+        background-color: #2E4374;
+    }
+    
+    .Plus-Menu {
+        width: 180px;
+
+        position: absolute;
+        right: 0; /* 수정된 부분: 오른쪽에 정렬 */
+        transform: translate(-50%, -50%);
+        top: 83%;
+        left:73%;
+
+        background-color: #fff; /* 수정된 부분: 배경색 추가 */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 수정된 부분: 그림자 추가 */
+        padding: 10px; /* 수정된 부분: 내부 여백 추가 */
+        border-radius: 5px; /* 수정된 부분: 테두리 둥글게 처리 */
+        z-index: 1; /* 수정된 부분: 메뉴를 버튼 위로 표시하기 위해 z-index 추가 */
+    }
+
+    .Plus-Text {
+        display: flex;
+        flex-direction: column;
+
+        cursor: pointer;
+
+        font-size: 2.5vw;
+        color: #2E4374;
+    }
 }

@@ -1,32 +1,71 @@
 import "./Projectlist.css"
-
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 function ProjectList() {
-    return(
+    // 상태 추가
+    const [projects, setProjects] = useState([]);
+    const [showNewProjectMenu, setShowNewProjectMenu] = useState(false);
+
+    // 새로운 프로젝트 메뉴를 토글하는 함수
+    const toggleNewProjectMenu = () => {
+        setShowNewProjectMenu(!showNewProjectMenu);
+    };
+
+    const [activeMenu, setActiveMenu] = useState(null);
+    
+    const handleClick = (menu) => {
+        setActiveMenu(menu);
+    };
+
+    // 데이터 로딩
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const response = await fetch('http://localhost:8090/api/projects');
+                if (!response.ok) {
+                    throw new Error('Failed to fetch data');
+                }
+                const data = await response.json();
+                setProjects(data);
+            } catch (error) {
+                console.error('Error fetching data:', error);
+            }
+        };
+
+        fetchData(); 
+    }, []); 
+
+    return (
         <div>
-        <div className="first-project">
-            <p className="P-Title">캡스톤 디자인(모바일 프로그래밍)</p>
-            <p className="P-sub">프로젝트 시작일:2024.5.14    4명</p>
-            
+            <div>
+            <div>
+                <div className={`MenuBar ${activeMenu === "진행중인" ? "active" : "inactive"}`} onClick={() => handleClick("진행중인")}>진행중인</div>
+                <div className={`MenuBar ${activeMenu === "완성된" ? "active" : "inactive"}`} onClick={() => handleClick("완성된")}>완성된</div>
+                <div className="MenuBar">프로젝트</div>
+
+           
+            {projects.map((project, index) => (
+                <div key={index} className="P-Box">
+                  <Link to={`/projectdetail/${project.id}`}>
+                    <p className="P-Title">{project.name}</p>
+                    <p className="P-Sub">프로젝트 시작일: {project.startDate} ~ {project.endDate}</p>
+                    </Link>
+                </div>
+            ))}
+             <p className="Plus-Button" onClick={toggleNewProjectMenu}>+</p>
+
+            {showNewProjectMenu && (
+            <div className="Plus-Menu">
+            <a href="/new" className="Plus-Text">새로운 프로젝트 생성</a>
+            <p className="Plus-Text">초대코드 입력</p>
+            </div>
+            )}
+</div>
+
         </div>
-
-        <div className="first-project">
-            <p className="P-Title">동아리</p>
-            <p className="P-sub">프로젝트 시작일:2024.5.14    20명</p>
-            
         </div>
-
-        <div className="first-project">
-            <p className="P-Title">프로그래밍 언어론</p>
-            <p className="P-sub">프로젝트 시작일:2024.5.14    40명</p>
-            
-        </div>
-
-
-        <p className="plus">+</p>
-
-        </div>
-    )
+    );
 }
 
 export default ProjectList;
