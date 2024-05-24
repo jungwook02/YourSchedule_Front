@@ -1,0 +1,107 @@
+@media (max-width: 768px) {
+    .MenuBar {
+        display: inline-block;
+
+        font-size: 4.5vw;
+        font-style: bold;
+        font-weight: 600;
+        color: #2E4374;
+
+        margin-left: 10px;
+        margin-right: 10px;
+        padding-top: 30px;
+        margin-bottom: 10px;
+    }
+
+    .MenuBar.active {
+        color: #2E4374;
+    }
+    
+    .MenuBar.inactive {
+        color: #CACACA;
+    }
+    
+    
+
+    .P-Box{
+        margin-left: 3%;
+        margin-right: 3%;
+        margin-bottom: 3%;
+
+        display: flex;
+        flex-direction: column;
+
+        border-radius: 20px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /*그림자*/
+
+        cursor: pointer;
+    }
+
+    .P-Title{
+        font-size: 4vw;
+        color: #2E4374;
+        font-style: bold;
+        font-weight: 600;
+
+        margin-left: 10px;
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+
+    .P-Sub{
+        font-size: 3vw;
+        color: #2E4374;
+        font-style: bold;
+        font-weight: 600;
+
+        margin-left: 10px;
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+
+    .Plus-Button {
+        position: fixed;
+        top: 80%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        
+        cursor: pointer;
+        text-align: center;
+        line-height: 12vw;
+        
+        width: 15vw;
+        height: 15vw;
+        border-radius: 50%;
+        
+        color: white;
+        font-size: 12vw;
+        background-color: #2E4374;
+    }
+    
+    
+    .Plus-Menu {
+        width: 130px;
+
+        position: absolute;
+        right: 0; /* 수정된 부분: 오른쪽에 정렬 */
+        transform: translate(-50%, -50%);
+        top: 85%;
+        left: 79%;
+
+        background-color: #fff;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        padding: 10px;
+        border-radius: 5px;
+        z-index: 1;
+    }
+
+    .Plus-Text {
+        display: flex;
+        flex-direction: column;
+
+        cursor: pointer;
+
+        font-size: 4vw;
+        color: #2E4374;
+    }
+}
