@@ -7,7 +7,11 @@ function Projectmain() {
             <div className="Projectmain-Title">모바일 프로그래밍</div>
 
             <div className="Yourschedule-Box">
-                <div className="Box-Title">너의 일정은</div>
+                <div className="Box-Title">
+                    <div className="Title-Text">
+                        너의 일정은
+                    </div>
+                </div>
 
                 <div className="Preview">
                     <div className="Preview-Title">회의 시간</div>
@@ -19,7 +23,9 @@ function Projectmain() {
             </div>
 
             <div className="Noticeboard-Box">
-                <div className="Box-Title">게시판</div>
+                <div className="Box-Title">
+                    <div className="Title-Text">게시판</div>
+                </div>
 
                 <div className="Preview">
                     <div className="Preview-Title">5/28 발표 자료</div>
