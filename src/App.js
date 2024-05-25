@@ -1,27 +1,17 @@
-import Navbar from "./components/navbar.js";
-import Newproject from "./components/newproject.js";
-import Login from "./components/login.js";
-import ProjectList from "./components/projectlist.js";
-import ProjectDetail from "./components/projectdetail.js";
-import "./App.css";
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Main from"./components/Main.js";
+import Projectlist from "./components/Projectlist.js";
+import Login from "./components/Login.js"
+import Projectmain from "./components/Projectmain.js"
+import Membership from "./components/Membership.js"
+import "./App.css"
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path='/new' element={<Newproject/>}></Route>
-      </Routes>
+    <div className="App">
 
-      <Routes>
-        <Route path='/' element={<ProjectList/>}></Route>
-      </Routes>
+    <Projectmain />
 
-      <Routes>
-
-        <Route path='/projectdetail/:id' element={<ProjectDetail/>}></Route>
-      </Routes>
-    </BrowserRouter>
+    </div>
   );
 }
 

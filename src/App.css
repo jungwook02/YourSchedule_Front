@@ -1,3 +1,10 @@
 .App {
-  background-color: #f8f8f8; /* 배경색을 여기에 원하는 색상 코드로 지정합니다. */
+  position: fixed;
+  width: 100%;
+  align-items: center;
+  background-color: #f7f7f7; /* 배경색을 여기에 원하는 색상 코드로 지정합니다. */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh; 
 }
