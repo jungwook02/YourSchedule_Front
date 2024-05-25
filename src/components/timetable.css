@@ -1,0 +1,36 @@
+@media (max-width: 768px) {
+.max{
+    height: 500px;
+}
+
+
+.saved-time {
+    /* Add your styles for the parent div here */
+    width: 15px;
+    max-height: 1000px; /* Set a maximum height */
+    overflow: auto;    /* Add scrollbar if content exceeds maximum height */
+}
+
+.saved-time-content {
+    /* Add your styles for the child div here */
+    font-size: 14px;
+  
+}
+.ReservedTime_ReservedTime__delete__1D6VL {
+    display: none;
+}
+.MySavedTime {
+    position: absolute;
+    margin:0%;
+    background-color: #2E4374;
+    width: 18px;
+   
+}
+
+.MySavedTime h5 {
+  
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+}

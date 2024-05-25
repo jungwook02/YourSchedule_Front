@@ -1,4 +1,4 @@
-import "./Projectlist.css"
+import "./projectlist.css"
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
@@ -46,10 +46,10 @@ function ProjectList() {
 
            
             {projects.map((project, index) => (
-                <div key={index} className="P-Box">
+                <div key={index} className="Projectlist-Box">
                   <Link to={`/projectdetail/${project.id}`}>
-                    <p className="P-Title">{project.name}</p>
-                    <p className="P-Sub">프로젝트 시작일: {project.startDate} ~ {project.endDate}</p>
+                    <p className="Projectlist-Title">{project.name}</p>
+                    <p className="Projectlist-Sub">프로젝트 시작일: {project.startDate} ~ {project.endDate}</p>
                     </Link>
                 </div>
             ))}

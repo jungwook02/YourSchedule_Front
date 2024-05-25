@@ -1,9 +1,9 @@
-import "./newproject.css"
+import "./newproject.css";
 import React, { useState } from "react";
 import DatePicker from "react-datepicker";
-import Select from 'react-select';
 import "react-datepicker/dist/react-datepicker.css";
 import { Link } from 'react-router-dom';
+
 
 function NewProject() {
     const [projectName, setProjectName] = useState("");
@@ -32,7 +32,7 @@ function NewProject() {
                 throw new Error('Failed to add new project');
             }
 
-            // 프로젝트 추가 성공 시에 필요한 동작 수행
+         
             console.log('New project added successfully!');
         } catch (error) {
             console.error('Error adding new project:', error);
@@ -71,7 +71,7 @@ function NewProject() {
                 <option value="대외활동">대외활동</option>
             </select>
             <br />
-            <Link to="/" onClick={handleSubmit}>
+            <Link to="/main" onClick={handleSubmit}>
         <input type="submit" value="다음" />
       </Link>
         </div>
