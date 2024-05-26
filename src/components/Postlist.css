@@ -1,0 +1,108 @@
+@media (max-width: 768px) {
+    .Postlist-Title {
+        margin-left: 3%;
+        margin-right: 3%;
+        margin-top: 30px;
+        margin-bottom: 20px;
+        height: 60px;
+        
+        display: flex;
+        flex-direction: column;
+
+        text-align: center;
+
+        border-radius: 20px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /*그림자*/
+
+        background-color: white;
+    }
+
+    .Post-Text{
+      padding-top: 8px;
+      font-size: 5vw;
+      font-style: bold;
+      font-weight: 600;
+      color: #2E4374;
+    }
+
+    .Title-Text{
+        font-size: 3vw;
+        font-style: bold;
+        font-weight: 600;
+        color: #2E4374;
+    }
+
+    .Postlist-Box{
+        margin-left: 3%;
+        margin-right: 3%;
+        margin-bottom: 5%;
+        padding-top: 10px;
+
+        height: 670px;
+
+        display: flex;
+        flex-direction: column;
+
+        border-radius: 20px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /*그림자*/
+
+        background-color: white;
+        overflow-y: auto; /* 수직 스크롤 추가 */
+        overflow-x: hidden; /* 수평 스크롤 제거 */
+    }
+
+    .Search-input {
+        margin-left: 3%;
+        margin-right: 3%;
+        margin-bottom: 20px;
+        display: inline-block;
+        width: 100%; /* 원하는 너비로 설정 */
+        max-width: 89%; /* 최대 너비 설정 */
+        padding: 10px; /* 내부 여백 설정 */
+        font-size: 16px; /* 글꼴 크기 설정 */
+        border: 1px solid #ccc; /* 테두리 설정 */
+        border-radius: 20px; /* 테두리 둥글게 설정 */
+        box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1); /* 내부 그림자 설정 */
+        transition: border-color 0.3s, box-shadow 0.3s; /* 포커스 시 애니메이션 설정 */
+    }
+
+    .Search-input:focus {
+        border-color: #2E4374; /* 포커스 시 테두리 색상 변경 */
+        box-shadow: 0 0 8px rgba(46, 67, 116, 0.3); /* 포커스 시 그림자 설정 */
+        outline: none; /* 포커스 시 기본 테두리 제거 */
+    }
+
+    .Search-input::placeholder {
+        color: #aaa; /* 플레이스홀더 텍스트 색상 설정 */
+    }
+
+    .Postlist-Preview{
+        border-bottom: 1px solid #bbbbbb;
+        cursor: pointer;
+        margin-bottom: 6px;
+    }
+
+    .Postlist-Previewtitle {
+        color: #2E4374;
+
+        margin-left: 3%;
+        margin-bottom: 6px;
+        font-size: 4.5vw;
+    }
+    
+    .Postlist-Previewinfo{
+        display: flex;
+        font-size: 3.5vw;
+        margin-top: 1px;
+        margin-bottom: 6px;
+    }
+
+    .Postlist-Previewpublisher {
+        margin-left: 3%;
+    }
+    
+    .Postlist-Previewtime {
+        display: flex;
+        margin-left: 3%;
+    }
+}
