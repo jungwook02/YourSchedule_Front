@@ -2,8 +2,8 @@ import React, { useEffect } from 'react';
 import './main.css';
 import { Link } from 'react-router-dom';
 function Main() {
-  const backgroundImageUrl = `${process.env.PUBLIC_URL}/img/background.png`;
-  const fontUrl = `${process.env.PUBLIC_URL}/font/GowunBatang-Regular.ttf`;
+  const backgroundImageUrl = './img/background.png';
+  const fontUrl = './font/GowunBatang-Regular.ttf';
 
   const backgroundStyle = {
     backgroundImage: `url(${backgroundImageUrl})`,

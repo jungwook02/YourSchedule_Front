@@ -71,7 +71,7 @@ function NewProject() {
                 <option value="대외활동">대외활동</option>
             </select>
             <br />
-            <Link to="/main" onClick={handleSubmit}>
+            <Link to='/main' onClick={handleSubmit}>
         <input type="submit" value="다음" />
       </Link>
         </div>

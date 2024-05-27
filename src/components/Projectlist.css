@@ -3,8 +3,7 @@
         display: inline-block;
 
         font-size: 4.5vw;
-        font-style: bold;
-        font-weight: 600;
+        font-weight: 600; /* font-style: bold; 대신 */
         color: #2E4374;
 
         margin-left: 10px;
@@ -40,8 +39,7 @@
     .Projectlist-Title{
         font-size: 4vw;
         color: #2E4374;
-        font-style: bold;
-        font-weight: 600;
+        font-weight: 600; /* font-style: bold; 대신 */
 
         margin-left: 10px;
         margin-top: 20px;
@@ -51,8 +49,7 @@
     .Projectlist-Sub{
         font-size: 3vw;
         color: #2E4374;
-        font-style: bold;
-        font-weight: 600;
+        font-weight: 600; /* font-style: bold; 대신 */
 
         margin-left: 10px;
         margin-top: 10px;
@@ -78,16 +75,12 @@
         background-color: #2E4374;
     }
     
-    
     .Plus-Menu {
         width: 130px;
-
         position: absolute;
-        right: 0; /* 수정된 부분: 오른쪽에 정렬 */
-        transform: translate(-50%, -50%);
-        top: 85%;
-        left: 79%;
-
+        right: 0; /* 오른쪽 정렬 */
+        top: 85%; /* 위치 조정 */
+        transform: translate(-50%, -50%); /* 위치 조정 */
         background-color: #fff;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         padding: 10px;

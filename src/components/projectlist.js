@@ -47,7 +47,7 @@ function ProjectList() {
            
             {projects.map((project, index) => (
                 <div key={index} className="Projectlist-Box">
-                  <Link to={`/projectdetail/${project.id}`}>
+                  <Link to="/projectdetail/${project.id}">
                     <p className="Projectlist-Title">{project.name}</p>
                     <p className="Projectlist-Sub">프로젝트 시작일: {project.startDate} ~ {project.endDate}</p>
                     </Link>
