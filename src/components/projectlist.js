@@ -5,6 +5,10 @@ import { Link } from 'react-router-dom';
 function ProjectList() {
     // 상태 추가
     const [projects, setProjects] = useState([]);
+    
+    const [activeMenu, setActiveMenu] = useState("진행중인");
+
+    // + 버튼 누르기 전에는 메뉴 비활성화
     const [showNewProjectMenu, setShowNewProjectMenu] = useState(false);
 
     // 새로운 프로젝트 메뉴를 토글하는 함수
@@ -12,12 +16,10 @@ function ProjectList() {
         setShowNewProjectMenu(!showNewProjectMenu);
     };
 
-    const [activeMenu, setActiveMenu] = useState(null);
-    
+    // + 버튼 활성화
     const handleClick = (menu) => {
         setActiveMenu(menu);
     };
-
     // 데이터 로딩
     useEffect(() => {
         const fetchData = async () => {
@@ -57,7 +59,7 @@ function ProjectList() {
 
             {showNewProjectMenu && (
             <div className="Plus-Menu">
-            <a href="/new" className="Plus-Text">새로운 프로젝트 생성</a>
+            <Link to="/new">새로운 프로젝트 생성</Link>
             <p className="Plus-Text">초대코드 입력</p>
             </div>
             )}
