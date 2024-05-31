@@ -15,14 +15,14 @@
 
     .Post-Text {
         padding-top: 8px;
-        font-size: 5vw;
+        font-size: 20px;
         font-style: bold;
         font-weight: 600;
         color: #2E4374;
     }
   
     .Title-Text {
-        font-size: 3vw;
+        font-size: 12px;
         font-style: bold;
         font-weight: 600;
         color: #2E4374;
@@ -42,7 +42,7 @@
     .Post-Publisher {
         margin-top: 20px;
         margin-left: 20px;
-        font-size: 5vw;
+        font-size: 20px;
         font-style: bold;
         font-weight: 600;
         color: #2E4374;
@@ -58,7 +58,7 @@
     .Post-ContentTitle {
         margin-left: 20px;
         margin-bottom: 5px;
-        font-size: 5vw;
+        font-size: 20px;
         font-style: bold;
         font-weight: 600;
     }
@@ -85,14 +85,14 @@
         margin-right: 20px;
         font-style: bold;
         font-weight: 600;
-        font-size: 4vw;
+        font-size: 16px;
     }
 
     .Comment-Content {
         margin-top: 3px;
         margin-left: 20px;
         margin-right: 20px;
-        font-size: 4vw;
+        font-size: 16px;
     }
 
     .Comment-Time {

@@ -1,0 +1,102 @@
+@media (max-width: 768px) {
+    .MenuBar {
+        display: inline-block;
+
+        font-size: 20px;
+        font-weight: 600; /* font-style: bold; 대신 */
+        color: #2E4374;
+
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-top: 30px;
+        margin-bottom: 10px;
+    }
+    a{
+        text-decoration: none;
+    }
+    .MenuBar.active {
+        color: #2E4374;
+    }
+    
+    .MenuBar.inactive {
+        color: #CACACA;
+    }
+
+    .Projectlist-Box{
+        margin-left: 12px;
+        margin-right: 12px;
+        margin-bottom: 12px;
+
+        display: flex;
+        flex-direction: column;
+
+        border-radius: 20px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /*그림자*/
+
+        cursor: pointer;
+    }
+
+    .Projectlist-Title{
+        font-size: 17px;
+        color: #2E4374;
+        font-style: bold;
+        font-weight: 600; /* font-style: bold; 대신 */
+
+        margin-left: 10px;
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+
+    .Projectlist-Sub{
+        font-size: 12px;
+        color: #2E4374;
+        font-style: bold;
+        font-weight: 600; /* font-style: bold; 대신 */
+
+        margin-left: 10px;
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+
+    .Plus-Button {
+        position: fixed;
+        top: 80%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        
+        cursor: pointer;
+        text-align: center;
+        line-height: 45px;
+        
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        
+        color: white;
+        font-size: 60px;
+        background-color: #2E4374;
+    }
+    
+    .Plus-Menu {
+        width: 140px;
+        position: absolute;
+        left: 78%; /* 오른쪽 정렬 */
+        top: 85%; /* 위치 조정 */
+        transform: translate(-50%, -50%); /* 위치 조정 */
+        background-color: #fff;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        padding: 10px;
+        border-radius: 5px;
+        z-index: 1;
+    }
+
+    .Plus-Text {
+        display: flex;
+        flex-direction: column;
+
+        cursor: pointer;
+
+        font-size: 14px;
+        color: #2E4374;
+    }
+}
