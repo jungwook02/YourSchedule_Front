@@ -1,0 +1,111 @@
+@media (max-width: 768px) {
+
+    .Projectmain-Title{
+        margin-left: 12px;
+        margin-right: 12px;
+        margin-top: 12px;
+        margin-bottom: 20px;
+        height: 50px;
+
+        line-height: 50px;
+
+        display: flex;
+        flex-direction: column;
+
+        text-align: center;
+
+        border-radius: 20px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /*그림자*/
+
+        background-color: white;
+        font-size: 20px;
+        font-style: bold;
+        font-weight: 600;
+        color: #2E4374;
+    }
+
+    .See-More{
+        display: inline-block;
+    }
+
+    .Noticeboard-Box{
+        margin-left: 12px;
+        margin-right: 12px;
+        margin-bottom: 20px;
+
+        height: 480px;
+
+        display: flex;
+        flex-direction: column;
+
+        border-radius: 20px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /*그림자*/
+
+        background-color: white;
+    }
+
+    .Yourschedule-Box{
+        margin-left: 12px;
+        margin-right: 12px;
+        margin-bottom: 20px;
+
+        height: 250px;
+
+        display: flex;
+        flex-direction: column;
+
+        border-radius: 20px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /*그림자*/
+
+        background-color: white;
+    }
+
+    .Box-Title{
+        margin-top: 12px;
+        margin-bottom: 10px;
+
+        padding-bottom: 10px;
+        border-bottom: 2px solid #2E4374;
+        
+        cursor: pointer;
+
+        font-size: 18px;
+        font-style: bold;
+        font-weight: 600;
+        color: #2E4374;
+    }
+
+    .Title-Text{
+        margin-left: 12px;
+    }
+
+    .Preview{
+        border-bottom: 1px solid #bbbbbb;
+        cursor: pointer;
+        margin-bottom: 6px;
+    }
+
+    .Preview-Title {
+        color: #2E4374;
+
+        margin-left: 12px;
+        margin-bottom: 6px;
+        font-size: 18px;
+    }
+    
+    .Preview-Info{
+        display: flex;
+        font-size: 14px;
+        margin-top: 1px;
+        margin-bottom: 6px;
+    }
+
+    .Preview-Publisher {
+        margin-left: 12px;
+    }
+    
+    .Preview-Time {
+        display: flex;
+        margin-left: 12px;
+    }    
+}

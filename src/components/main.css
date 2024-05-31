@@ -1,0 +1,88 @@
+@media (max-width: 768px) {
+
+  @keyframes slideInDown {
+    0% {
+      opacity: 0;
+      transform: translateY(-100%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes appear {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  .Title-Your {
+    position: absolute;
+    color: white;
+    font-size: 14vw;
+    transform: translate(-50%, -50%);
+    top: 30%;
+    left: 30%;
+    animation: slideInDown 3s ease forwards;
+  }
+  
+  .Title-Schedule {
+    position: absolute;
+    color: white;
+    font-size: 14vw;
+    transform: translate(-50%, -50%);
+    top: 40%;
+    left: 35%;
+    animation: slideInDown 3s ease forwards;
+  }
+  
+  .Login-Button {
+    background-color: #2E4374;
+    color: white;
+    top: 80%;
+    left: 50%;
+    display: inline-block;
+    width: 200px; /* 버튼의 너비 */
+    height: 50px; /* 버튼의 높이 */
+    line-height: 50px;
+    font-size: 4vw;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    border-radius: 100px;
+    transition: background-color 0.3s ease;
+  
+    position: absolute;
+    transform: translate(-50%, -50%);
+
+    animation: appear 3s ease forwards;
+  }
+
+  .Membership{
+    background-color: White;
+    color: #2E4374;
+    top: 87%;
+    left: 50%;
+    display: inline-block;
+    width: 200px; /* 버튼의 너비 */
+    height: 50px; /* 버튼의 높이 */
+    line-height: 50px;
+    font-size: 4vw;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    border-radius: 100px;
+    transition: background-color 0.3s ease;
+  
+    position: absolute;
+    transform: translate(-50%, -50%);
+
+    animation: appear 3s ease forwards;
+  }
+}

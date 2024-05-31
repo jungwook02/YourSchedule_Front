@@ -12,7 +12,7 @@ function ProjectList() {
         setShowNewProjectMenu(!showNewProjectMenu);
     };
 
-    const [activeMenu, setActiveMenu] = useState(null);
+    const [activeMenu, setActiveMenu] = useState("진행중인");
     
     const handleClick = (menu) => {
         setActiveMenu(menu);
@@ -46,11 +46,11 @@ function ProjectList() {
 
            
             {projects.map((project, index) => (
-                <div key={index} className="P-Box">
-                  <Link to={`/projectdetail/${project.id}`}>
-                    <p className="P-Title">{project.name}</p>
-                    <p className="P-Sub">프로젝트 시작일: {project.startDate} ~ {project.endDate}</p>
-                    </Link>
+                <div key={index} className="Projectlist-Box">
+                  <Link to="/projectdetail/${project.id}">
+                    <p className="Projectlist-Title">{project.name}</p>
+                    <p className="Projectlist-Sub">프로젝트 시작일: {project.startDate} ~ {project.endDate}</p>
+                  </Link>
                 </div>
             ))}
              <p className="Plus-Button" onClick={toggleNewProjectMenu}>+</p>
@@ -61,7 +61,7 @@ function ProjectList() {
             <p className="Plus-Text">초대코드 입력</p>
             </div>
             )}
-</div>
+        </div>
 
         </div>
         </div>

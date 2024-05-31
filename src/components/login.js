@@ -1,19 +1,25 @@
+import { Link } from "react-router-dom";
 import "./login.css"
 
 function Login() {
     return(
         <div>
-        <h1 className="h1-text">코드 입력</h1>
-        <input type="text" placeholder="초대 코드를 입력해주세요" />
-        <h2 className="h2-text">사용자 이름</h2>
-        <input type="text" placeholder="이름을 입력해주세요" />
-        <h2 className="h2-text">사용자 학번</h2>
-        <input type="text" placeholder="학번을 입력해주세요" />
+            <div className="Login">로그인</div>
+
+            <div className ="Align">
+                <div className="Text">아이디</div>
+                <input type="text" className="custom-input" placeholder="아이디를 입력해주세요" />
+
+                <div className="Text">비밀번호</div>
+                <input type="text" className="custom-input" placeholder="비밀번호를 입력해주세요" />
+            </div>
+            <Link to = "/main">
+            <div className="Submit-Button">→</div>
+            </Link>
 
 
-
-        <input type="submit" value="확인"/>
         </div>
+        
     )
 
 }

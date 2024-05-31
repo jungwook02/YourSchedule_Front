@@ -1,19 +1,28 @@
-import Main from"./components/Main.js";
-import Login from "./components/Login.js"
-import Membership from "./components/Membership.js"
-import Projectlist from "./components/Projectlist.js";
-import Projectmain from "./components/Projectmain.js"
-import Postlist from "./components/Postlist.js"
-import Post from "./components/Post.js"
-import "./App.css"
-
-function App() {
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Main from './components/main';
+import Newproject from './components/newproject';
+import Login from './components/login';
+import ProjectList from './components/projectlist';
+import Membership from './components/Membership';
+import ProjectDetail from './components/projectdetail';
+import Projectmain from './components/projectmain';
+import Scheduler from './components/timetable';
+import Post from './components/post';
+function App() {   
   return (
-    <div className="App">
-
-      <Post />
-
-    </div>
+    <Router>
+      <Routes>
+        <Route path='/' element={<Main />} />
+        <Route path='/new' element={<Newproject />} />
+        <Route path='/login' element={<Login />} />
+        <Route path='/main' element={<ProjectList />} />
+        <Route path='/membership' element={<Membership />} />
+        <Route path='/projectdetail/:id' element={<Projectmain />} />
+        <Route path='/calender' element={<Scheduler/>} />
+        <Route path='/post' element={<Post/>} />
+      </Routes>
+    </Router>
   );
 }
 
