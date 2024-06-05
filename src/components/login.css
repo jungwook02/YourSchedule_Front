@@ -1,9 +1,9 @@
 @media (max-width: 768px) {
     .Login{
         padding-top:30px;
-        margin-left: 3%;
+        margin-left: 12px;
 
-        font-size: 8vw;
+        font-size: 32px;
         font-style: bold;
         font-weight: 600;
         color: #2E4374;
@@ -12,14 +12,13 @@
     .Align{
         position: relative;
         width: 300px;
-
     }
 
     .Text{
-        font-size: 5vw;
+        font-size: 20px;
         color: #2E4374;
 
-        margin-top: 10%;
+        margin-top: 40px;
         margin-bottom: 10px;
     }
 
@@ -46,7 +45,6 @@
         color: #aaa; /* 플레이스홀더 텍스트 색상 설정 */
     }
 
-
     .Submit-Button{
         position: absolute;
         transform: translate(-50%, -50%);
@@ -62,12 +60,6 @@
         color: white;
         background-color: #2E4374;
         border-radius: 50%; /* 완벽한 원 모양을 위해 50% */
-    }
-
-    .Find-Button{
-        display: inline-block;
-
-        color: #2E4374;
     }
 
 }

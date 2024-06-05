@@ -3,7 +3,7 @@ import './projectmain.css';
 import { Link } from 'react-router-dom';
 
 function Projectmain() {
-    const [boaradTable, setProjects] = useState([]);
+    const [boardTable, setBoardTable] = useState([]);
 
     useEffect(() => {
         const fetchData = async () => {
@@ -13,56 +13,54 @@ function Projectmain() {
                     throw new Error('Failed to fetch data');
                 }
                 const data = await response.json();
-                setProjects(data);
+                setBoardTable(data);
             } catch (error) {
                 console.error('Error fetching data:', error);
             }
         };
 
-        fetchData(); 
-    }, []); 
+        fetchData();
+    }, []);
 
     return (
-     
         <div>
             <div className="Projectmain-Title">모바일 프로그래밍</div>
 
             <div className="Yourschedule-Box">
                 <div className="Box-Title">
-                    <Link to="/calender">
+                    <Link to="/creation">
                         <div className="Title-Text">
                             너의 일정은
                         </div>
                     </Link>
                 </div>
-
-                <div className="Preview">
-                    <div className="Preview-Title">회의 시간</div>
-                    <div className="Preview-Info">
-                        <div className="Preview-Publisher">박정욱</div>
-                        <div className="Preview-Time">19:38</div>
+                <Link to="/calender">
+                    <div className="Preview">
+                        <div className="Preview-Title">회의 시간</div>
+                        <div className="Preview-Info">
+                            <div className="Preview-Publisher">박정욱</div>
+                            <div className="Preview-Time">19:38</div>
+                        </div>
                     </div>
-                </div>
+                </Link>
             </div>
 
             <div className="Noticeboard-Box">
-                <Link to="/post">
+                <Link to="/newpost">
                     <div className="Box-Title">
                         <div className="Title-Text">게시판</div>
                     </div>
                 </Link>
-                <Link to="/post">                
-                {boaradTable.map((boaradTable, index) => (
-                    <div key={index} className="Preview">
-                        <div className="Preview-Title">{boaradTable.title}</div>
-                        <div className="Preview-Info">
-                            <div className="Preview-Publisher">{boaradTable.boardWriter}</div>
-                            <div className="Preview-Time">{boaradTable.createAt}</div>
+                {boardTable.map((board, index) => (
+                    <Link key={index} to="/post">
+                        <div className="Preview">
+                            <div className="Preview-Title">{board.boardtitle}</div>
+                            <div className="Preview-Info">
+                                <div className="Preview-Publisher">{board.boardWriter}</div>
+                            </div>
                         </div>
-                    </div>
+                    </Link>
                 ))}
-                </Link>
-
             </div>
         </div>
     );

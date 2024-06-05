@@ -44,7 +44,7 @@ function NewProject() {
             <h1 className="h1-text">새 프로젝트</h1>
             <br />
             <h2 className="h2-text">프로젝트 명</h2>
-            <input type="text" placeholder="프로젝트명을 입력해주세요" value={projectName} onChange={(e) => setProjectName(e.target.value)} />
+            <input type="text" placeholder="프로젝트명을 입력해주세요" className="Project-Name" value={projectName} onChange={(e) => setProjectName(e.target.value)} />
             <h2 className="h2-text">프로젝트 기간</h2>
             <div className="date-container">
                 <DatePicker
@@ -53,6 +53,8 @@ function NewProject() {
                     selectsStart
                     startDate={startDate}
                     endDate={endDate}
+                    className="custom-date-picker"
+                    placeholderText="Start Date" // 플레이스홀더 텍스트 설정
                 />
                 <DatePicker
                     selected={endDate}
@@ -60,11 +62,18 @@ function NewProject() {
                     selectsEnd
                     startDate={startDate}
                     endDate={endDate}
+                    className="custom-date-picker"
+                    placeholderText="End Date" // 플레이스홀더 텍스트 설정
                 />
             </div>
             <br />
             <h2 className="h2-text">프로젝트 종류</h2>
-            <select name="selectedFruit" value={projectType} onChange={(e) => setProjectType(e.target.value)}>
+            <select 
+                name="selectedFruit" 
+                value={projectType} 
+                onChange={(e) => setProjectType(e.target.value)} 
+                className="custom-select"
+            >
                 <option value="" disabled hidden>프로젝트 종류를 선택해주세요</option>
                 <option value="팀프로젝트">팀프로젝트</option>
                 <option value="공모전">공모전</option>

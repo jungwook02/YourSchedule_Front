@@ -1,36 +1,63 @@
 @media (max-width: 768px) {
-.max{
-    height: 500px;
-}
 
-
-.saved-time {
-    /* Add your styles for the parent div here */
-    width: 15px;
-    max-height: 1000px; /* Set a maximum height */
-    overflow: auto;    /* Add scrollbar if content exceeds maximum height */
-}
-
-.saved-time-content {
-    /* Add your styles for the child div here */
-    font-size: 14px;
-  
-}
-.ReservedTime_ReservedTime__delete__1D6VL {
-    display: none;
-}
-.MySavedTime {
-    position: absolute;
-    margin:0%;
-    background-color: #2E4374;
-    width: 18px;
-   
-}
-
-.MySavedTime h5 {
-  
-    font-size: 16px;
-    font-weight: bold;
-    margin-bottom: 5px;
-}
-}
+    .timetable{
+        height: 700px;
+        overflow-y: auto; /* 수직 스크롤 추가 */
+        overflow-x: hidden; /* 수평 스크롤 제거 */
+        
+        align-items: center; /* 가로 중앙 정렬 */
+    }
+    
+    
+    .saved-time {
+        /* Add your styles for the parent div here */
+        width: 15px;
+        max-height: 1000px; /* Set a maximum height */
+        overflow: auto;    /* Add scrollbar if content exceeds maximum height */
+    }
+    
+    .saved-time-content {
+        /* Add your styles for the child div here */
+        font-size: 10px;
+      
+    }
+    .ReservedTime_ReservedTime__delete__1D6VL {
+        display: none;
+    }
+    .MySavedTime {
+        position: absolute;
+        margin:0%;
+        background-color: #6784c7;
+        width: 24px;
+       
+    }
+    
+    .MySavedTime h5 {
+      
+        font-size: 16px;
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+    
+    .Pass-Button {
+        background-color: #2E4374;
+        color: white;
+        top: 92%;
+        left: 50%;
+        display: inline-block;
+        width: 200px; /* 버튼의 너비 */
+        height: 50px; /* 버튼의 높이 */
+        line-height: 50px;
+        font-size: 16px;
+        text-align: center;
+        text-decoration: none;
+        cursor: pointer;
+        border: none;
+        border-radius: 100px;
+        transition: background-color 0.3s ease;
+      
+        position: absolute;
+        transform: translate(-50%, -50%);
+      }
+    
+    }
