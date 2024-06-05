@@ -1,10 +1,10 @@
 @media (max-width: 768px) {
 
     .Projectmain-Title{
-        margin-left: 3%;
-        margin-right: 3%;
-        margin-top: 30px;
-        margin-bottom: 5%;
+        margin-left: 12px;
+        margin-right: 12px;
+        margin-top: 12px;
+        margin-bottom: 20px;
         height: 50px;
 
         line-height: 50px;
@@ -18,7 +18,7 @@
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /*그림자*/
 
         background-color: white;
-        font-size: 5vw;
+        font-size: 20px;
         font-style: bold;
         font-weight: 600;
         color: #2E4374;
@@ -29,9 +29,9 @@
     }
 
     .Noticeboard-Box{
-        margin-left: 3%;
-        margin-right: 3%;
-        margin-bottom: 5%;
+        margin-left: 12px;
+        margin-right: 12px;
+        margin-bottom: 20px;
 
         height: 480px;
 
@@ -45,9 +45,9 @@
     }
 
     .Yourschedule-Box{
-        margin-left: 3%;
-        margin-right: 3%;
-        margin-bottom: 5%;
+        margin-left: 12px;
+        margin-right: 12px;
+        margin-bottom: 20px;
 
         height: 250px;
 
@@ -61,7 +61,7 @@
     }
 
     .Box-Title{
-        margin-top: 3%;
+        margin-top: 12px;
         margin-bottom: 10px;
 
         padding-bottom: 10px;
@@ -69,14 +69,14 @@
         
         cursor: pointer;
 
-        font-size: 4.5vw;
+        font-size: 18px;
         font-style: bold;
         font-weight: 600;
         color: #2E4374;
     }
 
     .Title-Text{
-        margin-left: 3%;
+        margin-left: 12px;
     }
 
     .Preview{
@@ -88,24 +88,24 @@
     .Preview-Title {
         color: #2E4374;
 
-        margin-left: 3%;
+        margin-left: 12px;
         margin-bottom: 6px;
-        font-size: 4.5vw;
+        font-size: 18px;
     }
     
     .Preview-Info{
         display: flex;
-        font-size: 3.5vw;
+        font-size: 14px;
         margin-top: 1px;
         margin-bottom: 6px;
     }
 
     .Preview-Publisher {
-        margin-left: 3%;
+        margin-left: 12px;
     }
     
     .Preview-Time {
         display: flex;
-        margin-left: 3%;
+        margin-left: 12px;
     }    
 }

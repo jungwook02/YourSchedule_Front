@@ -1,7 +1,41 @@
-import React from 'react';
+import React, { useState } from 'react';
 import "./post.css"
-import { useState,useEffect } from 'react';
+
 function Post() {
+    const [comment, setComment] = useState("");
+    const [userId, setUserId] = useState("sampleUserId"); // 실제 사용자 ID를 여기에 설정하세요.
+
+    const handleCommentChange = (e) => {
+        setComment(e.target.value);
+    };
+
+    const handleCommentSubmit = async () => {
+        const commentData = {
+            userId: userId,
+            content: comment,
+            timestamp: new Date().toISOString()
+        };
+
+        try {
+            const response = await fetch("http://your-backend-api/comments", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(commentData)
+            });
+
+            if (response.ok) {
+                // 댓글 제출 후 처리 (예: 댓글 목록 갱신)
+                setComment("");
+            } else {
+                console.error("댓글 제출에 실패했습니다.");
+            }
+        } catch (error) {
+            console.error("서버 오류:", error);
+        }
+    };
+
     const content = `구글 스프레드시트로 WBS 제작했습니다!
     권한 풀어놔서 링크 확인해주시면 감사하겠습니다.
 
@@ -27,24 +61,6 @@ function Post() {
             </React.Fragment>
         );
     });
-    const [comment, setProjects] = useState([]);
-
-    useEffect(() => {
-        const fetchData = async () => {
-            try {
-                const response = await fetch('http://localhost:8090/board_ys/comments/123');
-                if (!response.ok) {
-                    throw new Error('Failed to fetch data');
-                }
-                const data = await response.json();
-                setProjects(data);
-            } catch (error) {
-                console.error('Error fetching data:', error);
-            }
-        };
-
-        fetchData(); 
-    }, []); 
 
     return(
         <div>
@@ -65,17 +81,37 @@ function Post() {
                 <div className="Post-Content">{formattedContent}</div>
             </div>
 
-           
-            {comment.map((comment, index) => (
-                <div key={index} className="Comment">
-                <div className="Comment-Writer">{comment.boardId}</div>
-                <div className="Comment-Content">{comment.content}</div>
-                <div className="Comment-Time">{comment.createAt}</div>
+            <div className="Comment">
+                <div className="Comment-Writer">박한비</div>
+                <div className="Comment-Content">감사합니다</div>
+                <div className="Comment-Time">05/27 11:23</div>
             </div>
-  ))}
-       
+
+            <div className="Comment">
+                <div className="Comment-Writer">김섭진</div>
+                <div className="Comment-Content">확인해보겠습니다!</div>
+                <div className="Comment-Time">05/27 11:23</div>
+            </div>
+
+            <div className="Comment">
+                <div className="Comment-Writer">박정욱</div>
+                <div className="Comment-Content">구현 부분에 프런트/백엔드 배포 추가하면 좋을 것 같습니다</div>
+                <div className="Comment-Time">05/27 11:23</div>
+            </div>
+            
             <div className="Comment-inputBox">
-                <input type="text" class="Comment-input" placeholder="댓글을 입력해주세요" />
+                <input
+                    type="hidden"
+                    value={userId}
+                    className="Comment-userId"
+                />
+                <input
+                    type="text"
+                    className="Comment-input"
+                    placeholder="댓글을 입력해주세요"
+                    value={comment}
+                    onChange={handleCommentChange}
+                />
                 <div className="Send-Button">→</div>
             </div>
         </div>
